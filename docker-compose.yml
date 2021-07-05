@@ -1,9 +1,0 @@
-docker-talha-test:
-    build: .
-     #environment:
-     # WORKER_SMTP_PORT: 265
-    command: python app.py
-    volumes:
-      - .:/home/tact/dockerizing-flask
-    ports:
-      - "9000:9000"

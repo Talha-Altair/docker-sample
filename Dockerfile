@@ -11,6 +11,8 @@ WORKDIR /talha
 
 RUN pip install -r requirements.txt
 
-CMD ["python3":"app.py"]
+ENTRYPOINT ["python3"]
+
+CMD ["app.py"]
 
 # USER app

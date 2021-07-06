@@ -3,11 +3,11 @@ FROM python:3.9.4-slim-buster
 
 # RUN useradd --user-group --create-home --shell /bin/false app 
 
-WORKDIR /home/tact/dockerizing-flask
+# WORKDIR /home/tact/dockerizing-flask
 
-ADD . .
+ADD . /talha
 
-#ADD app.py .
+WORKDIR /talha
 
 RUN pip install -r requirements.txt
 

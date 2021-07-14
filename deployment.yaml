@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flask-test-service
+  name: flask-test-service-2
 spec:
   selector:
-    app: flask-test-app
+    app: hello-brother
   ports:
   - protocol: "TCP"
     port: 6000
@@ -15,20 +15,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-test-app
+  name: hello-brother
 spec:
   selector:
     matchLabels:
-      app: flask-test-app
+      app: hello-brother
   replicas: 5
   template:
     metadata:
       labels:
-        app: flask-test-app
+        app: hello-brother
     spec:
       containers:
-      - name: flask-test-app
-        image: flask-kubernetes
+      - name: hello-brother
+        image: appdocker
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000

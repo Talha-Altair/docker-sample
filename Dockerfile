@@ -11,6 +11,8 @@ WORKDIR /talha
 
 RUN pip install -r requirements.txt
 
+EXPOSE 80
+
 ENTRYPOINT ["python3"]
 
 CMD ["app.py"]
